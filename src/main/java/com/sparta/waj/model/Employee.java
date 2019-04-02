@@ -1,10 +1,6 @@
 package com.sparta.waj.model;
 
-import com.sparta.waj.model.validation.RecordTemplate;
-
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.MonthDay;
 
 public class Employee implements RecordTemplate {
 

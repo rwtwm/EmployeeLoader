@@ -38,5 +38,6 @@ public class DataManager {
 
     public void launchProcess(){
         DataLoader loader = new DataLoader(filename, validator);
+        loader.sortFile();
     }
 }
