@@ -42,6 +42,11 @@ public class EmployeeDataStore{
         return failedRecords.size();
     }
 
+    public List<String> getFailedRecords()
+    {
+        return failedRecords;
+    }
+
     public boolean checkRecordExists(int key)
     {
         if (passedRecords.containsKey(key))
@@ -49,6 +54,11 @@ public class EmployeeDataStore{
             return true;
         }
         return false;
+    }
+
+    public Map<Integer, Employee> getPassedRecords()
+    {
+        return passedRecords;
     }
 
     public Employee getEmployeeRecord(int key)

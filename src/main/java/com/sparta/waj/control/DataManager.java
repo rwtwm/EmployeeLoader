@@ -1,6 +1,9 @@
 package com.sparta.waj.control;
 
+import com.sparta.waj.database.EmployeeDatabaseLoader;
+import com.sparta.waj.model.datastore.EmployeeDataStore;
 import com.sparta.waj.model.loader.DataLoader;
+import com.sparta.waj.model.loader.ExceptionWriter;
 import com.sparta.waj.model.validation.RecordValidator;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -36,8 +39,17 @@ public class DataManager {
         }
     }
 
-    public void launchProcess(){
+    public void runProcess(){
         DataLoader loader = new DataLoader(filename, validator);
         loader.sortFile();
+
+        EmployeeDataStore dataStore = loader.getDataStore();
+        EmployeeDatabaseLoader databaseLoader = new EmployeeDatabaseLoader();
+        ExceptionWriter exceptionWriter = new ExceptionWriter();
+
+        int insertionCount = databaseLoader.employeeLoader(dataStore.getPassedRecords());
+        int exceptionCount = exceptionWriter.writeExceptions(dataStore.getFailedRecords());
+        logger.log(Level.TRACE, "Process complete - " + insertionCount + " records loaded & "
+                        + exceptionCount + " exceptions written");
     }
 }

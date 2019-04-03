@@ -1,1 +1,7 @@
 02-04-2019 15:20:12 FATAL [main] DataManager - Process failed on set-up. Java exception reources\factory.properties (The system cannot find the path specified)
+02-04-2019 15:21:06 FATAL [main] DataManager - Process failed on set-up. Java exception com.sparta.waj.model.validation.mployeeValidator
+03-04-2019 13:49:50 FATAL [main] EmployeeDatabaseLoader - SQL Exception encountered. Java message: No suitable driver found for jdbc:mysql://localhost:3306/Employee_Migration?user=root&password=wSparta2019j
+03-04-2019 13:54:44 FATAL [main] EmployeeDatabaseLoader - SQL Exception encountered. Java message: No suitable driver found for jdbc:mysql://localhost:3306/Employee_Migration?user=root&password=wSparta2019j
+03-04-2019 13:55:28 FATAL [main] EmployeeDatabaseLoader - SQL Exception encountered. Java message: No suitable driver found for jdbc:mysql://localhost:3306/Employee_Migration?user=root&password=wSparta2019j
+03-04-2019 13:57:17 FATAL [main] EmployeeDatabaseLoader - SQL Exception encountered. Java message: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VALUES37,'Mr.','Waine','A','James','M','wjames@spartaglobal.com',STR_TO_DATE('12' at line 1
+03-04-2019 14:02:27 FATAL [main] EmployeeDatabaseLoader - SQL Exception encountered. Java message: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%m/%d/%Y),STR_TO_DATE('3/4/2019',%m/%d/%Y),23000)' at line 1

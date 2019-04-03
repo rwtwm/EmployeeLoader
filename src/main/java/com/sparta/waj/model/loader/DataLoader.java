@@ -6,7 +6,6 @@ import com.sparta.waj.model.datastore.EmployeeDataStore;
 import com.sparta.waj.model.validation.RecordValidator;
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -16,10 +15,6 @@ import java.time.LocalDate;
 public class DataLoader {
 
     private Logger logger = Logger.getLogger(DataManager.class.getName());
-
-    {
-        PropertyConfigurator.configure("resources/log4j.properties");
-    }
 
     RecordValidator validator;
     String fileSource;
