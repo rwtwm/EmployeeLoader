@@ -1,8 +1,11 @@
 package com.sparta.waj.model;
 
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Employee implements RecordTemplate {
+
+    public static final DateTimeFormatter US_FORMAT_DATE = DateTimeFormatter.ofPattern("M/d/yyyy");
 
     private final int empID;
     private final String title;
@@ -29,19 +32,22 @@ public class Employee implements RecordTemplate {
         this.salary = salary;
     }
 
-    public int getID()
-    {
-        return empID;
-    }
+    public int getID() {return empID;}
 
-    public int getSalary() {
-        return salary;
-    }
+    public String getTitle() {return title;}
+
+    public String getFirstName() {return firstName;}
+
+    public char getMidInitial() {return midInitial;}
+
+    public String getSurname() {return surname;}
 
     public String getName()
     {
         return firstName + " " + midInitial + " " + surname;
     }
+
+    public char getGender() {return gender;}
 
     public String getEmail() {
         return eMail;
@@ -54,4 +60,9 @@ public class Employee implements RecordTemplate {
     public LocalDate getJoinDate() {
         return dateJoined;
     }
+
+    public int getSalary() {
+        return salary;
+    }
+
 }

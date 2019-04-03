@@ -9,13 +9,10 @@ import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
-//Currently managing map creation and decoupling with generic and passed validator. May be a better way.
 public class DataLoader {
 
     private Logger logger = Logger.getLogger(DataManager.class.getName());
@@ -24,7 +21,6 @@ public class DataLoader {
         PropertyConfigurator.configure("resources/log4j.properties");
     }
 
-    private DateTimeFormatter usFormatDate = DateTimeFormatter.ofPattern("M/d/yyyy");
     RecordValidator validator;
     String fileSource;
     EmployeeDataStore employeeStore = new EmployeeDataStore();
@@ -80,8 +76,8 @@ public class DataLoader {
                 passingFields[4],
                 passingFields[5].charAt(0),
                 passingFields[6],
-                LocalDate.parse(passingFields[7], usFormatDate),
-                LocalDate.parse(passingFields[8], usFormatDate),
+                LocalDate.parse(passingFields[7], Employee.US_FORMAT_DATE),
+                LocalDate.parse(passingFields[8], Employee.US_FORMAT_DATE),
                 Integer.parseInt(passingFields[9])
         );
     }
