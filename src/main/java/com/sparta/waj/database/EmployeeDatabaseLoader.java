@@ -7,7 +7,6 @@ import org.apache.log4j.Logger;
 
 import java.sql.*;
 import java.util.Collection;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.TimeZone;
 
@@ -15,7 +14,7 @@ public class EmployeeDatabaseLoader
 {
     private Logger logger = Logger.getLogger(EmployeeDatabaseLoader.class.getName());
     private Connection connection;
-    PreparedStatement statement;
+    private PreparedStatement statement;
 
     public int employeeLoader(Map employeeMap)
     {

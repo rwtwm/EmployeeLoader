@@ -2,3 +2,5 @@
 resources/logfile
 mysql-connector-java-8.0.15.jar
 src/main/java/com/sparta/waj/database/DatabaseConsts.java
+resources/EmployeeRecordsLarge.csv
+target

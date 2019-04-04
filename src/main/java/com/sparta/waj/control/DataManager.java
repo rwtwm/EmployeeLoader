@@ -1,6 +1,7 @@
 package com.sparta.waj.control;
 
 import com.sparta.waj.Performance;
+import com.sparta.waj.database.DatabaseThreadManager;
 import com.sparta.waj.database.EmployeeDatabaseLoader;
 import com.sparta.waj.model.datastore.EmployeeDataStore;
 import com.sparta.waj.model.loader.DataLoader;
@@ -10,6 +11,7 @@ import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
+import javax.xml.crypto.Data;
 import java.io.FileReader;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -40,7 +42,7 @@ public class DataManager {
         }
     }
 
-    public void runProcess(){
+    public int EmployeeLoader(){
         Performance timer = Performance.getInstance();
         timer.startTimer();
 
@@ -50,12 +52,16 @@ public class DataManager {
         logger.log(Level.TRACE, "Time to load file: " + timer.getElapsedTime() + " nanosecs.");
 
         EmployeeDataStore dataStore = loader.getDataStore();
-        EmployeeDatabaseLoader databaseLoader = new EmployeeDatabaseLoader();
+
+//      EmployeeDatabaseLoader databaseLoader = new EmployeeDatabaseLoader();
+        DatabaseThreadManager threadManager = new DatabaseThreadManager(dataStore.getPassedRecords().values());
+
         ExceptionWriter exceptionWriter = new ExceptionWriter();
 
         logger.log(Level.TRACE, "Time from from commence to start writing: "+ timer.getElapsedTime() + " nanosecs.");
 
-        int insertionCount = databaseLoader.employeeLoader(dataStore.getPassedRecords());
+//        int insertionCount = databaseLoader.employeeLoader(dataStore.getPassedRecords());
+        threadManager.runThreads();
 
         logger.log(Level.TRACE, "Time taken to write to database: "+ timer.getTimeSinceLastStamp() + " nanosecs.");
 
@@ -63,9 +69,11 @@ public class DataManager {
 
         logger.log(Level.TRACE, "Time taken to write exception file: "+ timer.getTimeSinceLastStamp() + " nanosecs.");
 
-        logger.log(Level.TRACE, "Process complete - " + insertionCount + " records loaded & "
-                        + exceptionCount + " exceptions written");
+//        logger.log(Level.TRACE, "Process complete - " + insertionCount + " records loaded & "
+//                        + exceptionCount + " exceptions written");
 
         logger.log(Level.TRACE, "Time to complete the process: " + timer.getElapsedTime() + " nanosecs.");
+
+        return 0;
     }
 }
