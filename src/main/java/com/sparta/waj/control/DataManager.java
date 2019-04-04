@@ -1,5 +1,6 @@
 package com.sparta.waj.control;
 
+import com.sparta.waj.Performance;
 import com.sparta.waj.database.EmployeeDatabaseLoader;
 import com.sparta.waj.model.datastore.EmployeeDataStore;
 import com.sparta.waj.model.loader.DataLoader;
@@ -40,16 +41,31 @@ public class DataManager {
     }
 
     public void runProcess(){
+        Performance timer = Performance.getInstance();
+        timer.startTimer();
+
         DataLoader loader = new DataLoader(filename, validator);
         loader.sortFile();
+
+        logger.log(Level.TRACE, "Time to load file: " + timer.getElapsedTime() + " nanosecs.");
 
         EmployeeDataStore dataStore = loader.getDataStore();
         EmployeeDatabaseLoader databaseLoader = new EmployeeDatabaseLoader();
         ExceptionWriter exceptionWriter = new ExceptionWriter();
 
+        logger.log(Level.TRACE, "Time from from commence to start writing: "+ timer.getElapsedTime() + " nanosecs.");
+
         int insertionCount = databaseLoader.employeeLoader(dataStore.getPassedRecords());
+
+        logger.log(Level.TRACE, "Time taken to write to database: "+ timer.getTimeSinceLastStamp() + " nanosecs.");
+
         int exceptionCount = exceptionWriter.writeExceptions(dataStore.getFailedRecords());
+
+        logger.log(Level.TRACE, "Time taken to write exception file: "+ timer.getTimeSinceLastStamp() + " nanosecs.");
+
         logger.log(Level.TRACE, "Process complete - " + insertionCount + " records loaded & "
                         + exceptionCount + " exceptions written");
+
+        logger.log(Level.TRACE, "Time to complete the process: " + timer.getElapsedTime() + " nanosecs.");
     }
 }

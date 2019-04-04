@@ -5,3 +5,84 @@
 03-04-2019 13:55:28 FATAL [main] EmployeeDatabaseLoader - SQL Exception encountered. Java message: No suitable driver found for jdbc:mysql://localhost:3306/Employee_Migration?user=root&password=wSparta2019j
 03-04-2019 13:57:17 FATAL [main] EmployeeDatabaseLoader - SQL Exception encountered. Java message: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'VALUES37,'Mr.','Waine','A','James','M','wjames@spartaglobal.com',STR_TO_DATE('12' at line 1
 03-04-2019 14:02:27 FATAL [main] EmployeeDatabaseLoader - SQL Exception encountered. Java message: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '%m/%d/%Y),STR_TO_DATE('3/4/2019',%m/%d/%Y),23000)' at line 1
+03-04-2019 15:43:17 TRACE [main] DataManager - Process complete - 9943 records loaded & 57 exceptions written
+03-04-2019 16:19:41 TRACE [main] DataManager - Time to load file: 756,592,700 nanosecs.
+03-04-2019 16:19:41 TRACE [main] DataManager - Time from from commence to start writing: 789,200,100 nanosecs.
+03-04-2019 16:19:43 FATAL [main] EmployeeDatabaseLoader - SQL Exception encountered. Java message: Duplicate entry '737291' for key 'PRIMARY'
+03-04-2019 16:20:48 TRACE [main] DataManager - Time to load file: 874,947,100 nanosecs.
+03-04-2019 16:20:48 TRACE [main] DataManager - Time from from commence to start writing: 953,812,800 nanosecs.
+03-04-2019 16:21:27 TRACE [main] DataManager - Time taken to write to database: 38,605,040,500 nanosecs.
+03-04-2019 16:21:27 TRACE [main] DataManager - Time taken to write exception file: 14,603,000 nanosecs.
+03-04-2019 16:21:27 TRACE [main] DataManager - Process complete - 9943 records loaded & 57 exceptions written
+03-04-2019 16:24:11 TRACE [main] DataManager - Time to load file: 736,290,200 nanosecs.
+03-04-2019 16:24:11 TRACE [main] DataManager - Time from from commence to start writing: 799,053,800 nanosecs.
+03-04-2019 16:24:54 TRACE [main] DataManager - Time taken to write to database: 43,208,989,000 nanosecs.
+03-04-2019 16:24:54 TRACE [main] DataManager - Time taken to write exception file: 32,235,900 nanosecs.
+03-04-2019 16:24:54 TRACE [main] DataManager - Process complete - 9943 records loaded & 57 exceptions written
+03-04-2019 16:24:54 TRACE [main] DataManager - Time to complete the process: 44,066,006,500 nanosecs.
+03-04-2019 16:39:11 TRACE [main] DataManager - Time to load file: 630,419,700 nanosecs.
+03-04-2019 16:39:11 TRACE [main] DataManager - Time from from commence to start writing: 666,905,000 nanosecs.
+03-04-2019 16:39:57 TRACE [main] DataManager - Time taken to write to database: 45,852,285,400 nanosecs.
+03-04-2019 16:39:57 TRACE [main] DataManager - Time taken to write exception file: 57,529,800 nanosecs.
+03-04-2019 16:39:57 TRACE [main] DataManager - Process complete - 9943 records loaded & 57 exceptions written
+03-04-2019 16:39:57 TRACE [main] DataManager - Time to complete the process: 46,605,038,000 nanosecs.
+03-04-2019 16:55:45 TRACE [main] DataManager - Time to load file: 856,187,200 nanosecs.
+03-04-2019 16:55:45 TRACE [main] DataManager - Time from from commence to start writing: 899,299,300 nanosecs.
+03-04-2019 16:56:24 TRACE [main] DataManager - Time taken to write to database: 39,425,283,300 nanosecs.
+03-04-2019 16:56:25 TRACE [main] DataManager - Time taken to write exception file: 15,723,800 nanosecs.
+03-04-2019 16:56:25 TRACE [main] DataManager - Process complete - 9943 records loaded & 57 exceptions written
+03-04-2019 16:56:25 TRACE [main] DataManager - Time to complete the process: 40,353,921,700 nanosecs.
+03-04-2019 17:16:43 TRACE [main] DataManager - Time to load file: 812,403,200 nanosecs.
+03-04-2019 17:16:43 TRACE [main] DataManager - Time from from commence to start writing: 844,657,600 nanosecs.
+03-04-2019 17:17:22 TRACE [main] DataManager - Time taken to write to database: 38,985,163,500 nanosecs.
+03-04-2019 17:17:22 TRACE [main] DataManager - Time taken to write exception file: 17,374,000 nanosecs.
+03-04-2019 17:17:22 TRACE [main] DataManager - Process complete - 9943 records loaded & 57 exceptions written
+03-04-2019 17:17:22 TRACE [main] DataManager - Time to complete the process: 39,866,397,000 nanosecs.
+03-04-2019 17:25:23 TRACE [main] DataManager - Time to load file: 837,334,400 nanosecs.
+03-04-2019 17:25:23 TRACE [main] DataManager - Time from from commence to start writing: 885,467,900 nanosecs.
+03-04-2019 17:26:04 TRACE [main] DataManager - Time taken to write to database: 41,024,000,900 nanosecs.
+03-04-2019 17:26:05 TRACE [main] DataManager - Time taken to write exception file: 36,177,100 nanosecs.
+03-04-2019 17:26:05 TRACE [main] DataManager - Process complete - 9943 records loaded & 57 exceptions written
+03-04-2019 17:26:05 TRACE [main] DataManager - Time to complete the process: 41,967,302,700 nanosecs.
+03-04-2019 17:28:07 TRACE [main] DataManager - Time to load file: 888,839,200 nanosecs.
+03-04-2019 17:28:07 TRACE [main] DataManager - Time from from commence to start writing: 924,519,500 nanosecs.
+03-04-2019 17:28:48 TRACE [main] DataManager - Time taken to write to database: 41,386,920,700 nanosecs.
+03-04-2019 17:28:48 TRACE [main] DataManager - Time taken to write exception file: 66,664,900 nanosecs.
+03-04-2019 17:28:49 TRACE [main] DataManager - Process complete - 9943 records loaded & 57 exceptions written
+03-04-2019 17:28:49 TRACE [main] DataManager - Time to complete the process: 42,425,648,500 nanosecs.
+03-04-2019 17:35:41 TRACE [main] DataManager - Time to load file: 1,023,983,700 nanosecs.
+03-04-2019 17:35:41 TRACE [main] DataManager - Time from from commence to start writing: 1,059,483,000 nanosecs.
+03-04-2019 17:35:43 FATAL [main] EmployeeDatabaseLoader - SQL Exception encountered. Java message: The server time zone value 'GMT Summer Time' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support.
+03-04-2019 17:36:27 TRACE [main] DataManager - Time to load file: 820,020,200 nanosecs.
+03-04-2019 17:36:27 TRACE [main] DataManager - Time from from commence to start writing: 863,087,900 nanosecs.
+03-04-2019 17:36:28 FATAL [main] EmployeeDatabaseLoader - SQL Exception encountered. Java message: The server time zone value 'GMT Summer Time' is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration property) to use a more specifc time zone value if you want to utilize time zone support.
+03-04-2019 17:40:55 TRACE [main] DataManager - Time to load file: 933,745,300 nanosecs.
+03-04-2019 17:40:55 TRACE [main] DataManager - Time from from commence to start writing: 968,788,500 nanosecs.
+03-04-2019 17:41:36 TRACE [main] DataManager - Time taken to write to database: 41,240,425,200 nanosecs.
+03-04-2019 17:41:36 TRACE [main] DataManager - Time taken to write exception file: 28,900,000 nanosecs.
+03-04-2019 17:41:36 TRACE [main] DataManager - Process complete - 9943 records loaded & 57 exceptions written
+03-04-2019 17:41:36 TRACE [main] DataManager - Time to complete the process: 42,343,470,700 nanosecs.
+03-04-2019 17:51:49 TRACE [main] DataManager - Time to load file: 860,461,500 nanosecs.
+03-04-2019 17:51:49 TRACE [main] DataManager - Time from from commence to start writing: 895,013,400 nanosecs.
+03-04-2019 17:52:25 TRACE [main] DataManager - Time taken to write to database: 36,381,300,100 nanosecs.
+03-04-2019 17:52:25 TRACE [main] DataManager - Time taken to write exception file: 23,667,000 nanosecs.
+03-04-2019 17:52:25 TRACE [main] DataManager - Process complete - 9943 records loaded & 57 exceptions written
+03-04-2019 17:52:25 TRACE [main] DataManager - Time to complete the process: 37,326,999,400 nanosecs.
+03-04-2019 19:58:18 TRACE [main] DataManager - Time to load file: 724,647,699 nanosecs.
+03-04-2019 19:58:18 TRACE [main] DataManager - Time from from commence to start writing: 771,720,400 nanosecs.
+03-04-2019 19:58:19 TRACE [main] EmployeeDatabaseLoader - Time to establish connection: 1,187,262,599
+03-04-2019 19:58:23 TRACE [main] EmployeeDatabaseLoader - 1000 records batch uploaded in: 4,306,409,300
+03-04-2019 19:58:27 TRACE [main] EmployeeDatabaseLoader - 1000 records batch uploaded in: 3,820,083,701
+03-04-2019 19:58:32 TRACE [main] EmployeeDatabaseLoader - 1000 records batch uploaded in: 4,573,328,301
+03-04-2019 19:58:36 TRACE [main] EmployeeDatabaseLoader - 1000 records batch uploaded in: 4,479,758,800
+03-04-2019 19:58:40 TRACE [main] EmployeeDatabaseLoader - 1000 records batch uploaded in: 3,947,054,000
+03-04-2019 19:58:44 TRACE [main] EmployeeDatabaseLoader - 1000 records batch uploaded in: 3,620,010,300
+03-04-2019 19:58:47 TRACE [main] EmployeeDatabaseLoader - 1000 records batch uploaded in: 3,624,101,700
+03-04-2019 19:58:51 TRACE [main] EmployeeDatabaseLoader - 1000 records batch uploaded in: 3,992,468,100
+03-04-2019 19:58:56 TRACE [main] EmployeeDatabaseLoader - 1000 records batch uploaded in: 4,671,184,301
+03-04-2019 19:59:00 TRACE [main] EmployeeDatabaseLoader - Final records loaded in: 3,747,004,200
+03-04-2019 19:59:00 TRACE [main] EmployeeDatabaseLoader - Connection closed in: 7,750,699
+03-04-2019 19:59:00 TRACE [main] DataManager - Time taken to write to database: 536,200 nanosecs.
+03-04-2019 19:59:00 TRACE [main] DataManager - Time taken to write exception file: 12,829,701 nanosecs.
+03-04-2019 19:59:00 TRACE [main] DataManager - Process complete - 9943 records loaded & 57 exceptions written
+03-04-2019 19:59:00 TRACE [main] DataManager - Time to complete the process: 42,778,520,200 nanosecs.
